@@ -131,7 +131,7 @@ This repository contains two Spring Boot projects:
 - Request: A simple GET request with no additional parameters.
 - Example:
   ```http
-  GET http://localhost:8082/api/google-doc/fetch
+  GET http://localhost:8081/api/google-doc/fetch
   ```
 
 ### 2. File Upload
@@ -142,7 +142,7 @@ This repository contains two Spring Boot projects:
   - file: The file to be uploaded (form-data).
 - Example:
   ```http
-  POST http://localhost:8082/api/files/upload
+  POST http://localhost:8081/api/files/upload
   Content-Type: multipart/form-data
   File: <path_to_file>
   ```
@@ -153,7 +153,7 @@ This repository contains two Spring Boot projects:
 - **Request**: A POST request with required parameters (could be body or query).
 - **Example**:
   ```http
-  POST http://localhost:8082/http-call/trigger
+  POST http://localhost:8081/http-call/trigger
   ```
 
 ### 4. **Send Email**
@@ -170,7 +170,7 @@ This repository contains two Spring Boot projects:
   ```
 - **Example**:
   ```http
-  POST http://localhost:8082/api/email/send
+  POST http://localhost:8081/api/email/send
   Content-Type: application/json
   Body: {
     "to": "cedrickhakuzimana@gmail.com",
@@ -190,7 +190,7 @@ This repository contains two Spring Boot projects:
   - `message`: The string message to be sent.
 - **Example**:
   ```http
-  POST http://localhost:8083/api/messages/send-string?message=Hello%20World
+  POST http://localhost:8082/api/messages/send-string?message=Hello%20World
   ```
 
 ### 2. **Send JSON Message**
@@ -206,7 +206,7 @@ This repository contains two Spring Boot projects:
   ```
 - **Example**:
   ```http
-  POST http://localhost:8083/api/messages/send-json
+  POST http://localhost:8082/api/messages/send-json
   Content-Type: application/json
   Body: {
     "status": "success",
