@@ -63,7 +63,7 @@ This project is a Spring Boot application that uses Apache Camel for routing.
 
 3. Run the application:
     ```bash
-    java -jar target/apache_camel_spring_boot.jar
+    ./mvnw spring-boot:run
     ```
 
 4. The application will start on port `8081` by default.
@@ -86,7 +86,7 @@ This project integrates Spring Boot with RabbitMQ for message handling.
 
 3. Run the application:
     ```bash
-    java -jar target/rabbitmq_spring_boot.jar
+    ./mvnw spring-boot:run
     ```
 
 4. The application will start on port `8082` by default.
@@ -110,26 +110,116 @@ spring.rabbitmq.password=guest
 
 Once the **RabbitMQ Spring Boot** project is running, it will connect to RabbitMQ, sending and receiving messages. You can interact with RabbitMQ using the management console or through the application's API endpoints (if provided).
 
+Here is a comprehensive documentation for the endpoints in your Apache Camel and RabbitMQ Spring Boot projects:
+
+### `README.md` Update for Your Apache Camel and RabbitMQ Spring Boot Projects
+
+```markdown
+# Spring Boot Test Projects
+
+This repository contains two Spring Boot projects:
+
+1. **Apache Camel Spring Boot**: A Spring Boot application using Apache Camel for routing and integration.
+2. **RabbitMQ Spring Boot**: A Spring Boot application that interacts with RabbitMQ for messaging.
+
+## Base URL
+
+- **Apache Camel Spring Boot**: `http://localhost:8082/`
+- **RabbitMQ Spring Boot**: `http://localhost:8083/`
+
+## Apache Camel Endpoints
+
+### 1. **Fetch Google Docs**
+- **Endpoint**: `GET /api/google-doc/fetch`
+- **Description**: This endpoint fetches Google Docs data.
+- **Request**: A simple GET request with no additional parameters.
+- **Example**:
+  ```http
+  GET http://localhost:8082/api/google-doc/fetch
+  ```
+
+### 2. **File Upload**
+- **Endpoint**: `POST /api/files/upload`
+- **Description**: This endpoint allows you to upload files.
+- **Request**: Form data with a file included.
+- **Form Data**:
+  - **file**: The file to be uploaded (form-data).
+- **Example**:
+  ```http
+  POST http://localhost:8082/api/files/upload
+  Content-Type: multipart/form-data
+  File: <path_to_file>
+  ```
+
+### 3. **Trigger HTTP Call**
+- **Endpoint**: `POST /http-call/trigger`
+- **Description**: This endpoint triggers an HTTP call, typically used for some action or event within your system.
+- **Request**: A POST request with required parameters (could be body or query).
+- **Example**:
+  ```http
+  POST http://localhost:8082/http-call/trigger
+  ```
+
+### 4. **Send Email**
+- **Endpoint**: `POST /api/email/send`
+- **Description**: This endpoint sends an email with the given subject, body, and recipient.
+- **Request**: A JSON payload with email details.
+- **Request Body**:
+  ```json
+  {
+    "to": "cedrickhakuzimana@gmail.com",
+    "subject": "testing email with apache camel..",
+    "body": "testing email with apache camel..testing email with apache camel..testing email with apache camel.."
+  }
+  ```
+- **Example**:
+  ```http
+  POST http://localhost:8082/api/email/send
+  Content-Type: application/json
+  Body: {
+    "to": "cedrickhakuzimana@gmail.com",
+    "subject": "testing email with apache camel..",
+    "body": "testing email with apache camel..testing email with apache camel..testing email with apache camel.."
+  }
+  ```
+
+---
+
+## RabbitMQ Spring Boot Endpoints
+
+### 1. **Send String Message**
+- **Endpoint**: `POST /api/messages/send-string`
+- **Description**: This endpoint sends a string message to the RabbitMQ queue.
+- **Query Parameter**: 
+  - `message`: The string message to be sent.
+- **Example**:
+  ```http
+  POST http://localhost:8083/api/messages/send-string?message=Hello%20World
+  ```
+
+### 2. **Send JSON Message**
+- **Endpoint**: `POST /api/messages/send-json`
+- **Description**: This endpoint sends a JSON message to the RabbitMQ queue.
+- **Request Body**: 
+  ```json
+  {
+    "status": "success",
+    "message": "Message sent successfully",
+    "details": "This is a detailed message"
+  }
+  ```
+- **Example**:
+  ```http
+  POST http://localhost:8083/api/messages/send-json
+  Content-Type: application/json
+  Body: {
+    "status": "success",
+    "message": "Message sent successfully",
+    "details": "This is a detailed message"
+  }
+  ```
+
 ## Conclusion
 
 This repository contains two Spring Boot projects, each serving a different purpose. The **Apache Camel Spring Boot** project uses Apache Camel for routing, while the **RabbitMQ Spring Boot** project integrates with RabbitMQ for message-based communication.
 
-Feel free to explore, modify, and extend the projects to fit your use cases!
-
-## License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-```
-
-### Key Points:
-1. **Folder Structure**: The `README.md` reflects the two main projects as folders under the repository.
-2. **Build and Run Instructions**: Clear steps for building and running each of the two projects separately.
-3. **RabbitMQ Configuration**: Specific instructions for setting up RabbitMQ, which is needed for the `rabbitmq_spring_boot` project.
-4. **Usage**: General instructions on how to test and interact with the projects.
-
-### How to Add This to Your Repository:
-
-1. **Edit your `README.md`**: Copy the content above and paste it into the `README.md` file in the root of your repository.
-2. **Commit the Changes**: Commit and push the changes to GitHub.
-
-Let me know if you'd like to customize or add anything else!
