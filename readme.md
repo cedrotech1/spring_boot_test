@@ -110,12 +110,8 @@ spring.rabbitmq.password=guest
 
 Once the **RabbitMQ Spring Boot** project is running, it will connect to RabbitMQ, sending and receiving messages. You can interact with RabbitMQ using the management console or through the application's API endpoints (if provided).
 
-Here is a comprehensive documentation for the endpoints in your Apache Camel and RabbitMQ Spring Boot projects:
 
-### `README.md` Update for Your Apache Camel and RabbitMQ Spring Boot Projects
-
-```markdown
-# Spring Boot Test Projects
+# Spring Boot Test Projects endpoints
 
 This repository contains two Spring Boot projects:
 
@@ -124,27 +120,27 @@ This repository contains two Spring Boot projects:
 
 ## Base URL
 
-- **Apache Camel Spring Boot**: `http://localhost:8082/`
-- **RabbitMQ Spring Boot**: `http://localhost:8083/`
+- **Apache Camel Spring Boot**: `http://localhost:8081/`
+- **RabbitMQ Spring Boot**: `http://localhost:8082/`
 
 ## Apache Camel Endpoints
 
-### 1. **Fetch Google Docs**
-- **Endpoint**: `GET /api/google-doc/fetch`
-- **Description**: This endpoint fetches Google Docs data.
-- **Request**: A simple GET request with no additional parameters.
-- **Example**:
+### 1. Fetch Google Docs
+- Endpoint: `GET /api/google-doc/fetch`
+- Description: This endpoint fetches Google Docs data.
+- Request: A simple GET request with no additional parameters.
+- Example:
   ```http
   GET http://localhost:8082/api/google-doc/fetch
   ```
 
-### 2. **File Upload**
-- **Endpoint**: `POST /api/files/upload`
-- **Description**: This endpoint allows you to upload files.
-- **Request**: Form data with a file included.
-- **Form Data**:
-  - **file**: The file to be uploaded (form-data).
-- **Example**:
+### 2. File Upload
+- Endpoint: `POST /api/files/upload`
+- Description: This endpoint allows you to upload files.
+- Request: Form data with a file included.
+- Form Data:
+  - file: The file to be uploaded (form-data).
+- Example:
   ```http
   POST http://localhost:8082/api/files/upload
   Content-Type: multipart/form-data
