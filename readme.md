@@ -1,8 +1,6 @@
-Here's a `README.md` template for your GitHub repository that describes your project and includes the folder structure:
+## Project Structure
 
 ```markdown
-
-## Project Structure
 
 The project follows a standard Gradle-based Spring Boot setup with the following structure:
 
@@ -56,8 +54,7 @@ project-root/
 
 ## Prerequisites
 
-- **Java 17** or higher
-- **Gradle 7.x** or higher
+- **Java 23** or higher
 - **RabbitMQ** installed and running for the RabbitMQ project
 - **Apache Camel** dependencies for integration tasks
 
@@ -67,8 +64,8 @@ project-root/
 
 ### 1. Clone the repository
 ```bash
-git clone https://github.com/your-username/your-repository-name.git
-cd your-repository-name
+git clone https://github.com/techclick-rw/ir-middleware.git
+cd ir-middleware.git
 ```
 
 ### 2. Build the project
@@ -84,19 +81,14 @@ For Windows, use `gradlew.bat` instead of `./gradlew`.
 
 - **Apache Camel Spring Boot**: This project can be run on a separate port by executing the following command:
     ```bash
-    ./gradlew bootRun -Papp=camel
+    ./gradlew bootRun 
     ```
   
 - **RabbitMQ Spring Boot**: Similarly, you can run the RabbitMQ project:
     ```bash
-    ./gradlew bootRun -Papp=rabbitmq
+    ./gradlew bootRun 
     ```
 
 ---
 
-## License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
----
 
