@@ -16,7 +16,6 @@ Both projects are set up to run independently, each on a separate port.
 
 The project follows a standard Gradle-based Spring Boot setup with the following structure:
 
-```
 project-root/
 ├── build/                        # Contains generated build files
 │   ├── classes/                  # Compiled Java classes
@@ -60,6 +59,7 @@ project-root/
 ├── gradlew.bat                   # Gradle wrapper script for Windows
 ├── README.md                     # Project description and setup instructions
 └── settings.gradle               # Gradle settings configuration
+
 ```
 
 ---
@@ -110,17 +110,3 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ---
 
-## Contributions
-
-Contributions are welcome! Please fork this repository and submit pull requests for bug fixes or feature improvements.
-
----
-```
-
-### How to use this README:
-1. Replace `your-username` and `your-repository-name` with your actual GitHub username and repository name.
-2. You can modify the prerequisites section if there are other specific tools required.
-3. The setup instructions give a quick guide on how to clone and build the project with Gradle.
-4. The running instructions explain how to launch the different Spring Boot projects.
-
-Now, you can add this `README.md` to your GitHub repository to explain the project and its structure.
