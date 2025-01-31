@@ -69,24 +69,20 @@ cd ir-middleware.git
 ```
 
 ### 2. Build the project
-Run the following command to build the project using Gradle:
+Run the following command to clean and build the project using Gradle:
 
 ```bash
-./gradlew build
+./gradlew clean build
 ```
 
-For Windows, use `gradlew.bat` instead of `./gradlew`.
+
 
 ### 3. Running the Projects
 
-- **Apache Camel Spring Boot**: This project can be run on a separate port by executing the following command:
-    ```bash
-    ./gradlew bootRun 
-    ```
-  
+
 - **RabbitMQ Spring Boot**: Similarly, you can run the RabbitMQ project:
     ```bash
-    ./gradlew bootRun 
+    ./gradlew bootRun
     ```
 
 ---
