@@ -65,10 +65,16 @@ project-root/
 ### 1. Clone the repository
 ```bash
 git clone https://github.com/techclick-rw/ir-middleware.git
-cd ir-middleware.git
+cd ir-middleware
 ```
 
-### 2. Build the project
+### 2. .env configuration
+copy .env example and create variables... from the file
+
+### 3. make sure rabbit server is running (either use server/localhost docker)
+docker run --rm -it -p 15672:15672 -p 5672:5672 rabbitmq:4.0.5-management
+
+### 4. Build the project
 Run the following command to clean and build the project using Gradle:
 
 ```bash
@@ -77,13 +83,16 @@ Run the following command to clean and build the project using Gradle:
 
 
 
-### 3. Running the Projects
+### 5. Running the Projects
 
 
 - **RabbitMQ Spring Boot**: Similarly, you can run the RabbitMQ project:
     ```bash
     ./gradlew bootRun
     ```
+
+### 6. use swager documentation
+[http://localhost:8081/api/swagger-ui/index.htm](http://localhost:8081/api/swagger-ui/index.html)
 
 ---
 
