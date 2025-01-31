@@ -1,16 +1,6 @@
 Here's a `README.md` template for your GitHub repository that describes your project and includes the folder structure:
 
 ```markdown
-# Spring Boot Test Projects
-
-This repository contains two Spring Boot projects:
-
-- **Apache Camel Spring Boot**: A Spring Boot application using Apache Camel for routing and integration.
-- **RabbitMQ Spring Boot**: A Spring Boot application that interacts with RabbitMQ for messaging.
-
-Both projects are set up to run independently, each on a separate port. 
-
----
 
 ## Project Structure
 
