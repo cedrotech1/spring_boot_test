@@ -11,7 +11,7 @@ This repository contains two Spring Boot projects:
 Both projects are set up to run independently, each on a separate port. 
 
 ---
-```
+
 ## Project Structure
 
 The project follows a standard Gradle-based Spring Boot setup with the following structure:
